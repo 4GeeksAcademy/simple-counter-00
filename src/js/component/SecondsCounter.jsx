@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 
+
 //include images into your bundle
 
 
@@ -24,9 +25,10 @@ const SecondsCounter = () => {
 	return (
 		<div className="text-center">
 			
-			<div class="alert bg-dark mt-5 mx-5 text-light pt-5 fs-1 text" style={{height: "200px"}}>
-			{formatTime(secondns)}
-			<i class="fa-regular fa-clock-nine"></i>
+			<div class="alert bg-dark mt-5 mx-5 text-light  my-5 fa-3x" style={{height: "250px"}}>
+			<i class="fas fa-clock fa-3x"></i>
+			<span className="fa-3x">{formatTime(secondns)}</span>
+			
 </div>
 		</div>
 	);
