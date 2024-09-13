@@ -20,18 +20,53 @@ const SecondsCounter = () => {
 	const formatTime = () => {
 		const formatedSeconds = secondns.toString().padStart(6, '0');
 		return formatedSeconds;
-	}
+	};
 
-	return (
-		<div className="text-center">
-			
-			<div class="alert bg-dark mt-5 mx-5 text-light  my-5 fa-3x" style={{height: "250px"}}>
-			<i class="fas fa-clock fa-3x"></i>
-			<span className="fa-3x">{formatTime(secondns)}</span>
-			
-</div>
-		</div>
-	);
+	const containerStyle = {
+		display: 'flex', 
+		justifyContent: 'center', 
+		alignItems: 'center', 
+		backgroundColor: 'black',
+		height: '250px',
+		marginTop: '20px',
+		padding: '10px',
+		color: 'white',
+		fontSize: '2rem'
+	  };
+	
+	  
+	  const boxStyle = {
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		width: '150px',
+		height: '200px',
+		margin: '5px',
+		backgroundColor: '#333',
+		color: 'white',
+		borderRadius: '5px',
+		fontSize: '7rem'
+	  };
+
+	
+
+return (
+    <div className="text-center">
+      <div style={containerStyle}>
+        
+        <div style={boxStyle}>
+          <i className="fas fa-clock"></i>
+        </div>
+        
+        {formatTime().split("").map((digit, index) => (
+          <div key={index} style={boxStyle}>
+            {digit}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
+
 
 export default SecondsCounter;
