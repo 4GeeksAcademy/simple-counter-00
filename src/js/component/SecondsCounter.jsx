@@ -59,12 +59,14 @@ const CountdownTimer = () => {
     alignItems: 'center',
     backgroundColor: '#333',
     height: '300px',
+    width: '90%',
+    margin: '0 auto',
     marginTop: '20px',
     padding: '10px',
     color: 'white',
     fontSize: '3rem',
     fontFamily: '"Arial", sans-serif',
-    fontWeight: 'bold',
+    fontWeight: 'bold',	
   };
 
   // Estilo inline para cada cuadro
@@ -75,7 +77,7 @@ const CountdownTimer = () => {
     width: '150px',
     height: '200px',
     margin: '5px',
-    backgroundColor: '#333',
+    backgroundColor: 'grey',
     color: 'white',
     borderRadius: '10px',
     fontSize: '7rem',
